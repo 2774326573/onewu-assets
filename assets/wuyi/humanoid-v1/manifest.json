@@ -1,0 +1,158 @@
+{
+  "schema": "onewu.wuyi.asset-manifest.v1",
+  "id": "wuyi-humanoid-v1",
+  "name": "Wuyi Humanoid V1",
+  "displayName": "无一 · 默认人形 V1",
+  "version": "1.0.0",
+  "entity": "wuyi",
+  "type": "humanoid",
+  "default": true,
+  "fallback": true,
+  "canonicalForm": false,
+  "presentationRole": "default_fallback",
+  "description": "ONEWU / Wuyi Desktop 默认无一人形显化资产。产品默认表现，不代表《残剑宇宙》正史中的无一具有固定本体形态。",
+  "format": {
+    "image": "png",
+    "transparent": true,
+    "colorSpace": "sRGB",
+    "canvas": {
+      "width": 512,
+      "height": 512,
+      "unit": "px"
+    },
+    "frameNaming": {
+      "start": 1,
+      "zeroPad": 2,
+      "pattern": "{frame}.png"
+    }
+  },
+  "anchors": {
+    "standing": {
+      "x": 0.5,
+      "y": 0.92,
+      "description": "站立、走路、跑步、挥手共用脚底落点基准。"
+    },
+    "seated": {
+      "x": 0.5,
+      "y": 0.9,
+      "description": "坐姿动作使用身体接地基准。"
+    },
+    "lying": {
+      "x": 0.5,
+      "y": 0.86,
+      "description": "睡眠/卧姿动作使用身体接地基准。"
+    }
+  },
+  "reference": {
+    "fullBody": "reference/full-body.png",
+    "sourceSheet": "source/motion-reference-sheet.png"
+  },
+  "animations": {
+    "idle": {
+      "path": "animations/idle",
+      "frames": 6,
+      "fps": 6,
+      "loop": true,
+      "anchorProfile": "standing",
+      "canvas": {
+        "width": 512,
+        "height": 512
+      }
+    },
+    "walk": {
+      "path": "animations/walk",
+      "frames": 8,
+      "fps": 10,
+      "loop": true,
+      "anchorProfile": "standing",
+      "canvas": {
+        "width": 512,
+        "height": 512
+      }
+    },
+    "run": {
+      "path": "animations/run",
+      "frames": 6,
+      "fps": 12,
+      "loop": true,
+      "anchorProfile": "standing",
+      "canvas": {
+        "width": 512,
+        "height": 512
+      }
+    },
+    "sit": {
+      "path": "animations/sit",
+      "frames": 5,
+      "fps": 8,
+      "loop": false,
+      "anchorProfile": "seated",
+      "canvas": {
+        "width": 512,
+        "height": 512
+      }
+    },
+    "sleep": {
+      "path": "animations/sleep",
+      "frames": 4,
+      "fps": 4,
+      "loop": true,
+      "anchorProfile": "lying",
+      "canvas": {
+        "width": 512,
+        "height": 512
+      }
+    },
+    "wave": {
+      "path": "animations/wave",
+      "frames": 4,
+      "fps": 8,
+      "loop": false,
+      "anchorProfile": "standing",
+      "canvas": {
+        "width": 512,
+        "height": 512
+      }
+    }
+  },
+  "expressions": {
+    "normal": "expressions/normal.png",
+    "smile": "expressions/smile.png",
+    "blink": "expressions/blink.png",
+    "think": "expressions/think.png",
+    "happy": "expressions/happy.png",
+    "doubt": "expressions/doubt.png",
+    "sleepy": "expressions/sleepy.png",
+    "silent": "expressions/silent.png"
+  },
+  "previews": {
+    "idle": "previews/idle.gif",
+    "walk": "previews/walk.gif",
+    "run": "previews/run.gif"
+  },
+  "runtime": {
+    "defaultAnimation": "idle",
+    "fallbackAnimation": "idle",
+    "supportedHosts": [
+      "onewu-web",
+      "wuyi-desktop",
+      "wuyi-runtime",
+      "game-sdk"
+    ],
+    "loadMode": "manifest",
+    "frameOrder": "ascending"
+  },
+  "extensions": {
+    "plannedAnimations": [
+      "drink_coffee",
+      "coding",
+      "reading",
+      "thinking",
+      "greeting",
+      "cat_interact",
+      "manifest",
+      "dematerialize",
+      "particle_idle"
+    ]
+  }
+}
